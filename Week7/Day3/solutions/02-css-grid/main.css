@@ -1,4 +1,6 @@
-html, body, div {
+html,
+body,
+div {
     /* PAGE SETTINGS - DO NOT EDIT */
     font-family: sans-serif;
     background-color: antiquewhite;
@@ -12,34 +14,52 @@ html, body, div {
 
     /* Phase 1 */
     /* Your code here */
-
+    display: grid;
+    grid-template-columns: 3fr auto 1fr;
+    grid-template-areas:
+        "header header header"
+        "main . sidebar"
+        "footer footer footer";
     /* Bonus Phase */
     /* Your code here */
+    grid-gap: 15px 0;
 }
+
 .item-1 {
-    background-color: #87a7b3; /* steel blue */
+    background-color: #87a7b3;
+    /* steel blue */
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: header;
 }
+
 .item-2 {
-    background-color: #e1f1dd; /* light sea green */
+    background-color: #e1f1dd;
+    /* light sea green */
 
     /* Phase 1 */
+    grid-area: main;
     /* Your code here */
 }
+
 .item-3 {
-    background-color: #cdc7be; /* grey */
+    background-color: #cdc7be;
+    /* grey */
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: sidebar
 }
+
 .item-4 {
-    background-color: #766161; /* brown */
+    background-color: #766161;
+    /* brown */
     color: antiquewhite;
 
     /* Phase 1 */
     /* Your code here */
+    grid-area: footer;
 }
 
 .divider {
@@ -47,6 +67,7 @@ html, body, div {
 
     /* Bonus Phase */
     /* Your code here */
+    width: 100px;
 }
 
 /* ====== */
@@ -57,4 +78,12 @@ html, body, div {
 
     /* Phase 2 */
     /* Your code here */
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(3, 50px);
+    grid-auto-flow: column;
+
+    justify-content: center;
+    align-items: center;
 }

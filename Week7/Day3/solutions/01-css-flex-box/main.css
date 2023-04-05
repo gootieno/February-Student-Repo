@@ -8,6 +8,9 @@
     /* Phase 1 */
 
     /* Your code here */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .example2 {
@@ -18,13 +21,18 @@
     /* Phase 2 */
 
     /* Your code here */
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 8px;
 }
 
-.example2 > button {
+.example2>button {
     padding: 6px;
     font-size: 16px;
 }
-.example2 > input {
+
+.example2>input {
     font-size: 24px;
     background-color: teal;
     color: lightcyan;
@@ -36,9 +44,10 @@
     display: flex;
     flex-direction: row;
     gap: 8px;
+    justify-content: center;
 }
 
-.example3 > div {
+.example3>div {
     border: solid black 2px;
     background-color: #9999ff;
     border-radius: 25px;
@@ -47,12 +56,19 @@
     /* Phase 3 */
 
     /* Your code here */
+    /* flex: 0 1 33%; */
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
 }
 
 .example4 {
     /* Phase 4 - Part 1 of 2 */
 
     /* Your code here */
+    display: flex;
 }
 
 .sidebar {
@@ -62,7 +78,11 @@
     /* Phase 4 - Part 2 of 2 */
 
     /* Your code here */
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 fit-content;
 }
+
 .content-area {
     background-color: #E8EFF0;
     padding: 8px;
