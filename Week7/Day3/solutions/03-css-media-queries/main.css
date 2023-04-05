@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     font-family: sans-serif;
 }
@@ -21,10 +22,12 @@ header {
     gap: 1rem;
     display: flex;
 }
-.content > div {
+
+.content>div {
     flex: 1 1 100%;
 }
-.content > div:first-child {
+
+.content>div:first-child {
     flex: 0;
 }
 
@@ -52,6 +55,7 @@ header {
     padding: 1rem;
 }
 
+
 /* ===== TEXT, IMAGE ===== */
 
 .story-box {
@@ -74,9 +78,11 @@ header {
 .page {
     flex-direction: column;
 }
+
 .content {
     flex-direction: column;
 }
+
 .sidebar {
     flex-direction: row;
     justify-content: center;
@@ -85,13 +91,68 @@ header {
 /* ----- Phase 1 - Moderate Screen ----- */
 
 /* Your code here */
+@media screen and (min-width: 820px) and (max-width: 1219px) {
+    .content {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+}
 
 /* ----- Phase 1 - Wide Screen ----- */
 
 /* Your code here */
+@media screen and (min-width: 1220px) {
+    .page {
+        flex-direction: row;
+    }
+
+    .content {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
 
 /* ===== PRINTING ===== */
 
 /* Phase 2 */
 
 /* Your code here */
+@media print {
+    .story-box {
+        background-color: white;
+        filter: none;
+        border-radius: 0;
+    }
+
+    header,
+    .sidebar,
+    .image-box {
+        display: none;
+    }
+
+    .page,
+    .content {
+        padding: 0;
+    }
+
+    /* Bonus Phase - and remove .image-box from first line under @media print */
+    .image-box {
+        width: 85px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        float: right;
+    }
+}
