@@ -19,6 +19,7 @@
     white-space: nowrap;
     text-align: center;
 }
+
 .timeline .year {
     transform: rotate(-90deg) translate(-60px, -60px);
     width: 150px;
@@ -29,19 +30,23 @@
     background-color: #1CB0F6;
     flex: 1 1 50%;
 }
+
 .timeline .era2 {
     background-color: #1e87f0;
     flex: 1 1 20%;
 }
+
 .timeline .era3 {
     background-color: #0f6ecd;
     flex: 1 1 15%;
 }
+
 .timeline .era4 {
     background-color: #0D47A1;
     color: #E8EFF0;
     flex: 1 1 10%;
 }
+
 .timeline .era5 {
     background-color: #1d3e81;
     color: #E8EFF0;
@@ -68,20 +73,41 @@
 .timeline-labels .left {
     flex: 1 1 28%;
 }
+
 .timeline-labels .item1 {
     flex: 1 1 25%;
 }
+
 .timeline-labels .item2 {
     flex: 1 1 20%;
 }
+
 .timeline-labels .item3 {
     flex: 1 1 15%;
 }
+
 .timeline-labels .item4 {
     flex: 1 1 10%;
 }
+
 .timeline-labels .right {
     flex: 1 1 2%;
 }
 
-/* Your code here */
+/*!!START */
+/* Phase 7: Allow the full timeline to fit within the print page (not cut off) */
+@media print {
+
+    .timeline,
+    .timeline-labels {
+        min-width: 0;
+    }
+
+    /* Bonus: Improve visual connection of the years to labels on printout */
+    .timeline-scroll-area {
+        transform: scale(0.75, 0.75) translate(-18%, 0);
+        width: 140%;
+    }
+}
+
+/*!!END */
