@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <title>Shmedium</title>
+</head>
+<body>
+   <div id="header-container">
+        <div id="logo-container">
+            <img src="logo.png" class="logo logo-image">
+            <h2 id="medium-logo" class="logo">Medium</h2>
+        </div>
+        <nav id="nav-container">
+            <a class="nav-links">Our story</a>
+            <a class="nav-links">Membership</a>
+            <a class="nav-links">Write</a>
+            <a class="nav-links">Sign In</a>
+            <a class="nav-links nav-button">Get started</a>
+        </nav>    
+   </div>
+
+   <div id="main-content-container">
+    <section id="curious-container">
+        <h2 id="curious-heading" class="curious">Stay curious</h2>
+        <p class="curious">Discover stories, thinking, and expertise <br/>
+            from writers on any topic.
+        </p>
+        <a class="curious nav-button">Start reading</a>
+    </section>
+
+    <div id="m-container">
+    </div>
+   </div>
+   
+    <script>
+       const mContainer = document.getElementById('m-container')
+       console.log(mContainer)
+       for(let i = 0; i < 450; i++){
+        const span = document.createElement('span')
+        span.setAttribute('class','m')
+        span.innerText = 'M'
+        mContainer.append(span)
+       }
+    </script>
+</body>
+</html>
