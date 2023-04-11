@@ -44,6 +44,7 @@ const server = http.createServer((req, res) => {
   if (req.method === "GET" && req.url === "/") {
     console.log('Created cat and dog info:', { cat, dog });
     let htmlPage = fs.readFileSync("./views/index.html", 'utf-8');
+
     const resBody = htmlPage
       .replace(/#{cat}/g, cat ? `
         <div>
@@ -58,8 +59,8 @@ const server = http.createServer((req, res) => {
         <div>
           <h2>Created Dog:</h2>
           <h3>Name: ${dog.name}</h3>
-          <div>Pattern: ${dog.color}</div>
-          <div>Size: ${dog.age} years old</div>
+          <div>Color: ${dog.color}</div>
+          <div>Age: ${dog.age} years old</div>
           <div>Description: ${dog.description}</div>
         </div>
       ` : "<div>No dog created yet!</div>");
@@ -107,6 +108,7 @@ const server = http.createServer((req, res) => {
     }
 
     // Your code here
+    
 
     res.statusCode = 404;
     res.end("Page Not Found");
