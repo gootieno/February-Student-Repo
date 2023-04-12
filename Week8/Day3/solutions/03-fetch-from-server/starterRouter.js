@@ -59,7 +59,7 @@ function htmlRouter(req, res) {
       }
   
       // Phase 1: GET /dogs
-      if (req.method === 'GET' && req.url === '/dogs') {
+      if (req.method === 'GET' && req.url === '')/dogs {
      
         const htmlPage = fs.readFileSync("./views/dogs.html", 'utf-8');
         // use `dogs` array created at the top of the file

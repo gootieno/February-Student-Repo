@@ -24,3 +24,29 @@ Paste your code for fetch requests here once you finish each task.
 /* ============== 4. Print the body of the response as text =============== */
 
 // Your code here
+
+const getProducts = async () => {
+    const response =  await fetch('/products');
+
+    console.log('response  ', response);
+    console.log('status code ', response.status);
+    console.log('response  ok? ', response.ok);
+    console.log('response headers ', response.headers.get('content-type'));
+    console.log('response text ', await response.text());
+
+}
+
+getProducts()
+
+
+const getProductsWithDotThen = () => {
+    fetch('/products').then(response => {
+        console.log('response  ', response);
+        console.log('status code ', response.status);
+        console.log('response  ok? ', response.ok);
+        console.log('response headers ', response.headers.get('content-type'));
+        return response.text()
+    }).then(responseText => console.log('response text ', responseText))
+}
+
+getProductsWithDotThen()
