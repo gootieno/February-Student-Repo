@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/assets/index.css" rel="stylesheet">
+    <title>Comment Page</title>
+</head>
+<body>
+    <section id="comment-form-container">
+        <h2 id="comment-form-heading" class="comments">Create a comment</h2>
+        <form id="comment-form" class="comments" action="/comments" method="post">
+            <label id="comment-field" for="comment">Enter a comment</label>
+            <input id="comment" class="comments" name="comment">
+            <button id="submit-button" class="comments">Submit Comment</button>
+        </form>
+    </section>
+    <div id="comment-container">
+        <ul>
+            #{comments}
+        </ul>
+    </div>
+</body>
+</html>
