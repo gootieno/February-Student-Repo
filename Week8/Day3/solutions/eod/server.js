@@ -15,15 +15,20 @@ const server = http.createServer((req, res) => {
   req.on("end", () => {
     // Parsing the body of the request
     if (reqBody) {
-      req.body = reqBody
-        .split("&")
-        .map((keyValuePair) => keyValuePair.split("="))
-        .map(([key, value]) => [key, value.replace(/\+/g, " ")])
-        .map(([key, value]) => [key, decodeURIComponent(value)])
-        .reduce((acc, [key, value]) => {
-          acc[key] = value;
-          return acc;
-        }, {});
+      if (req.headers["content-type"] === "application/json") {
+        req.body = JSON.parse(reqBody);
+      } else {
+        req.body = reqBody
+          .split("&")
+          .map((keyValuePair) => keyValuePair.split("="))
+          .map(([key, value]) => [key, value.replace(/\+/g, " ")])
+          .map(([key, value]) => [key, decodeURIComponent(value)])
+          .reduce((acc, [key, value]) => {
+            acc[key] = value;
+            return acc;
+          }, {});
+      }
+
       console.log(req.body);
     }
 
@@ -62,6 +67,8 @@ const server = http.createServer((req, res) => {
       res.setHeader("Location", "/");
       return res.end();
     }
+
+  
   });
 });
 
