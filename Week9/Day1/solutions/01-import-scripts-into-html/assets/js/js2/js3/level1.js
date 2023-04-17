@@ -6,3 +6,7 @@ console.log(" . -.`-'`.` -  .`    `' `'-. .-- .'' .- . `-'.  `  . .`.!kPi ` '` e
 console.log(" ''--'   '`'-''''` -`  -`.-   .'` .-'- -`` ' '- .`  '-- `f95:.  - '?A%~'--.'... .`  . -''`.-.\n");
 console.log("`.`-`--' `      ` .-.'''   `      -..-.`'-..'. - ' -`._tPX+  ..  '=SP> .`.-'-` - .-' `  . '-.\n");
 console.log(" ` ..-. ` .'.-`.. '.- -'` `` ' - `' -`' `.'  '`--'. `./5%f_  -'  -`jAV``-'  .'.. .`- `- .  .'\n");
+
+const pTag = document.querySelector('p')
+console.log("can't select p tag if script is before p tag ", pTag)
+
