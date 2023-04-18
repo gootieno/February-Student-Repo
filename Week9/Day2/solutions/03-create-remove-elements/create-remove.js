@@ -7,6 +7,11 @@ add.addEventListener("click", async () => {
     console.log("data from fetch ", data);
     const url = data.message; // URL of new dog image
 
+    const urlParts = url.split("/");
+    console.log("url parts ", urlParts);
+
+    const dogBreed = urlParts[4];
+    console.log("dog breed ", dogBreed);
     /*
         <li>
             <figure>
@@ -17,6 +22,25 @@ add.addEventListener("click", async () => {
 
     */
 
+    // create elements
+    const li = document.createElement("li");
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const figCaption = document.createElement("figcaption");
+
+    // give elements values
+    figCaption.innerText = dogBreed;
+    img.setAttribute("src", url);
+
+    // append elements in order
+    figure.append(img, figCaption);
+    li.appendChild(figure);
+
+    li.style.border = "2px solid red";
+
+    console.log("list item ", li);
+    const ul = document.querySelector("ul");
+    ul.appendChild(li);
     /*--------------- Get breed (Hint: Parse from URL) ---------------- */
     // Your code here
 
@@ -39,6 +63,9 @@ removeFirst.addEventListener("click", () => {
   // Your code here
   /*-------------------- Remove the first dog card --------------------- */
   // Your code here
+  const firstDog = document.querySelector("li");
+
+  if (firstDog) firstDog.remove();
 });
 
 /************************** REMOVE LAST DOG BUTTON ***************************/
@@ -48,4 +75,7 @@ removeLast.addEventListener("click", () => {
   // Your code here
   /*-------------------- Remove the last dog card ----------------------- */
   // Your code here
+  const lastDog = document.querySelector(".gallery > ul").lastElementChild;
+
+  if (lastDog) lastDog.remove();
 });
