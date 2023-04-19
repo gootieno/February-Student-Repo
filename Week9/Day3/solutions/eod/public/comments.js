@@ -1,6 +1,6 @@
 export const createCommentsContainer = () => {
   const container = document.createElement("div");
-  container.style.width = "300px";
+  container.style.width = "500px";
   container.style.height = "300px";
   container.style.border = "2px solid black";
 
