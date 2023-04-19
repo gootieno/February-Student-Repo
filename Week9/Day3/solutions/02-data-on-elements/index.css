@@ -7,3 +7,7 @@ li {
 }
 
 /* Your code here */
+
+li[data-type="dairy"] {
+    background-color: aqua;
+}
