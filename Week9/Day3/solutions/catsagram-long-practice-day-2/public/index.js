@@ -304,8 +304,8 @@ const handleVoteChange = (upVoteVal, downVoteVal) => {
   const downVote = document.getElementById("down-vote");
 
   // set the inner html of the down vote buttons to the new values
-  upVote.innerHTML = `Up Vote ${upVoteVal}`;
-  downVote.innerHTML = `Down Vote ${downVoteVal}`;
+  upVote.innerText = `Up Vote ${upVoteVal}`;
+  downVote.innerText = `Down Vote ${downVoteVal}`;
 };
 
 // create a function for submitting comments
