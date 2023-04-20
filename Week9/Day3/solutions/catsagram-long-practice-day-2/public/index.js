@@ -260,7 +260,7 @@ const addComment = (inputValue) => {
   const commentBox = document.getElementById("comment-box");
 
   //  create a comment
-  const comment = document.createElement("p");
+  const comment = document.createElement("div");
 
   // give the comment some styles
   comment.style.margin = "0px";
